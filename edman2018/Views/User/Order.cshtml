@@ -1,0 +1,83 @@
+﻿@model edman2018.Models.Product
+
+@{
+
+    Layout = "~/Views/Shared/_Home.cshtml";
+
+}
+     <!-- Carousel Section -->
+    
+     <!--End Carousel Section -->
+    <!--Products Section -->
+    <div class="container"><br><br><br><br>
+            <div class="admin-panel clearfix">
+                    <div class="main">
+                         <div id="editaccount">
+                           <div class="quick-press">
+                            
+                             <form action="" method="post">             
+                                <div class="container">
+                                <div class="panel panel-primary">
+                                <div class="panel-heading">Payment</div>
+            
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Mode of Payment: </label><br>
+                                                @Html.Hidden("Product_ID", Model.Product_ID)
+                                                <select>
+                                                    <option>Cash on Delivery</option>
+                                                    <option>Bank Deposit Payment</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Quantity</label>
+                                                @Html.TextBox("Quantity", null, new { @type = "Number"})
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="row">
+
+                                        <div class='col-md-6'>
+                                            <div class="form-group">
+                                                <label class="control-label">Bank Deposit Reference Number (only to fill up when Bank Deposit)</label>
+                                                <input type="text" class="form-control" name="ReferenceNo" id="ReferenceNo">
+
+                                            </div>
+                                        </div>-->
+                                        <div class='col-md-6'>
+                                            <div class="form-group">
+                                                <label class="control-label">Bank (only to fill up when Bank Deposit)</label>
+                                                <br>
+                                                <select>
+                                                    <option value="1">BPI</option>
+                                                    <option value="2">BDO</option>
+                                                    <option value="3">Metro Bank</option>
+                                                    <option value="4">Union Bank</option>
+                                                    <option value="5">Citi Bank</option>
+                                                    <option value="6">EastWest Bank</option>
+                                                    <option value="7">China Bank</option>
+                                                    <option value="8">PNB</option>
+                                                    <option value="9">Land Bank</option>
+                                                    <option value="10">Security Bank</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="submit" class="btn btn-primary" value="Order">
+                                </div>
+                                </div>
+                                </div>
+
+                              </form>
+                            </div>
+                         </div>
+                     </div>
+                  </div>      
+    </div>
+   <!--End Products Section -->
+    <!-- JavaScript -->

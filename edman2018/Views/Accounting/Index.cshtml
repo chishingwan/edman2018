@@ -1,0 +1,32 @@
+﻿
+@{ 
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+                <div class="admin-panel clearfix">
+                        <div class="slidebar">
+                          <div class="logo">
+                           <a href=""></a>
+                          </div>
+                          <ul>
+                            <li><a href="#profile">My Profile</a></li>
+                            <li><a href="#reports">Reports</a></li>
+                            <li><a href="#posts">Logout</a></li>
+                          </ul>
+                        </div>
+                        <div class="main">
+                          <div class="mainContent clearfix">
+                               </div>
+                               <!--Reports Module-->
+                               <div id="reports">
+                                <!--INSERT EXTERNAL HTML REPORTS HERE-->
+                                   @Html.ActionLink("Print Request Report", "printRequestReport", "Accounting",null)
+                               </div>
+                               <div id="profile">
+                                    <h2 class="header"><span class="icon"></span>My Profile</h2>
+                                  </div>
+                             </div>
+                           </div>
+
+
+

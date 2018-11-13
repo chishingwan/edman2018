@@ -1,0 +1,43 @@
+﻿@model List<int>
+
+@{ 
+
+    Layout = "~/Views/Shared/_Home.cshtml";
+
+}
+    <div class="admin-panel clearfix">
+        <div class="main">
+             <div id="addinventory">
+               <div class="quick-press">
+                
+                 <form action="" method="post">             
+                    <div class="container">
+                    <div class="panel panel-primary">
+                    <div class="panel-heading">Add To Inventory</div>
+
+                    <div class="panel-body">
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Product ID</label>
+                                    @Html.DropDownList("Product_ID", new SelectList(Model), new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                    <input type="submit" class="btn btn-primary" value="Update">
+                    </div>
+                    </div>
+                    </div>
+                  </form>
+                </div>
+             </div>
+         </div>
+      </div>
+</body>
+</html>
+
+
+
+

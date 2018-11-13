@@ -44,3 +44,45 @@ C:\Users\marka\Documents\Visual Studio 2015\Projects\edman2018git\edman2018\bin\
 C:\Users\marka\Documents\Visual Studio 2015\Projects\edman2018git\edman2018\obj\Debug\edman2018.csprojResolveAssemblyReference.cache
 C:\Users\marka\Documents\Visual Studio 2015\Projects\edman2018git\edman2018\obj\Debug\edman2018.dll
 C:\Users\marka\Documents\Visual Studio 2015\Projects\edman2018git\edman2018\obj\Debug\edman2018.pdb
+C:\Users\Xotiii\Documents\edman2018\edman2018\obj\Debug\edman2018.csproj.CoreCompileInputs.cache
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\ApplicationInsights.config
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\edman2018.dll.config
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\edman2018.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\edman2018.pdb
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\EntityFramework.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\EntityFramework.SqlServer.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\Microsoft.AI.Web.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\System.Web.Helpers.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\System.Web.Mvc.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\System.Web.Razor.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\System.Web.Webpages.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\System.Web.Webpages.Razor.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\EntityFramework.xml
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\EntityFramework.SqlServer.xml
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\Microsoft.AI.Web.xml
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\System.Web.Razor.xml
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\System.Web.Webpages.xml
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\System.Web.Webpages.Razor.xml
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\System.Web.Helpers.xml
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\System.Web.Mvc.xml
+C:\Users\Xotiii\Documents\edman2018\edman2018\obj\Debug\edman2018.csproj.CopyComplete
+C:\Users\Xotiii\Documents\edman2018\edman2018\obj\Debug\edman2018.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\obj\Debug\edman2018.pdb
+C:\Users\Xotiii\Documents\edman2018\edman2018\obj\Debug\edman2018.csprojResolveAssemblyReference.cache
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.ReportSource.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.Shared.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.Web.dll

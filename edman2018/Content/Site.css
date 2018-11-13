@@ -1,18 +1,178 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+/*====================================
+ Free To Use For Personal And Commercial Usage
+Author: http://binarytheme.com
+ License: Open source - MIT
+ Please visit http://opensource.org/licenses/MIT for more Full Deatils of license.
+ Share Us if You Like our work 
+ Enjoy Our Codes For Free always.
+======================================*/
+
+/* ========================================
+    GENERAL STYLES
+    ======================================   */
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
+
+body {
+    margin-top:70px;
+    margin: 0;
+    padding: 0;
+    background: #DDD;
+    font-size: 16px;
+    color: #222;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.margin-top {
+	margin-top:20px; 
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+a:hover,
+a:focus {
+  color: #FF0047;
+  text-decoration: none;
+  outline: none;
+}
+.mr-botm {
+    margin-bottom:50px;
+}
+.mr-top-50 {
+    margin-top:50px;
+}
+/* ========================================
+    BOOTSTRAP STYLE CHANGES
+    ======================================   */
+.navbar-brand {
+    height:70px;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: #007AFF;
 }
 
+.navbar-inverse .navbar-nav > li > a {
+color: #FFF;
+}
+
+
+/* ========================================
+    CAROUSEL STYLE 
+    ======================================   */
+
+
+.carousel {
+ min-height: 300px;
+  margin-bottom: 30px;
+}
+
+.carousel-caption {
+  z-index: 10;
+}
+
+
+.carousel .item {
+   min-height: 300px;
+  background-color: #68c4f6;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+   min-height: 300px;
+}
+.carousel-caption {
+text-shadow: none;
+}
+
+.featuredtext{
+    margin-left: 370px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/*font Awesome http://fontawesome.io*/
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+/*Comment List styles*/
+.comment-list .row {
+  margin-bottom: 0px;
+}
+.comment-list .panel .panel-heading {
+  padding: 4px 15px;
+  position: absolute;
+  border:none;
+  /*Panel-heading border radius*/
+  border-top-right-radius:0px;
+  top: 1px;
+}
+.comment-list .panel .panel-heading.right {
+  border-right-width: 0px;
+  /*Panel-heading border radius*/
+  border-top-left-radius:0px;
+  right: 16px;
+}
+.comment-list .panel .panel-heading .panel-body {
+  padding-top: 6px;
+}
+.comment-list figcaption {
+  /*For wrapping text in thumbnail*/
+  word-wrap: break-word;
+}
+/* Portrait tablets and medium desktops */
+@media (min-width: 768px) {
+  .comment-list .arrow:after, .comment-list .arrow:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+  }
+  .comment-list .panel.arrow.left:after, .comment-list .panel.arrow.left:before {
+    border-left: 0;
+  }
+  /*****Left Arrow*****/
+  /*Outline effect style*/
+  .comment-list .panel.arrow.left:before {
+    left: 0px;
+    top: 30px;
+    /*Use boarder color of panel*/
+    border-right-color: inherit;
+    border-width: 16px;
+  }
+  /*Background color effect*/
+  .comment-list .panel.arrow.left:after {
+    left: 1px;
+    top: 31px;
+    /*Change for different outline color*/
+    border-right-color: #FFFFFF;
+    border-width: 15px;
+  }
+  /*****Right Arrow*****/
+  /*Outline effect style*/
+  .comment-list .panel.arrow.right:before {
+    right: -16px;
+    top: 30px;
+    /*Use boarder color of panel*/
+    border-left-color: inherit;
+    border-width: 16px;
+  }
+  /*Background color effect*/
+  .comment-list .panel.arrow.right:after {
+    right: -14px;
+    top: 31px;
+    /*Change for different outline color*/
+    border-left-color: #FFFFFF;
+    border-width: 15px;
+  }
+}
+.comment-list .comment-post {
+  margin-top: 6px;
+}
+.replycontainer{
+margin-left: 10px;
+}
+textarea{
+  resize:none;
+}
+    

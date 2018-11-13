@@ -1,0 +1,115 @@
+﻿@using edman2018.Models
+
+@model edman2018.Models.OperationsViewModel
+
+@{ 
+
+    Layout = "~/Views/Shared/_Home.cshtml";
+
+}
+
+                <div class="admin-panel clearfix">
+                        <div class="slidebar">
+                          <div class="logo">
+                            <a href=""></a>
+                          </div>
+                          <ul>
+                            <li><a href="#orders">Orders</a></li>
+                            <li><a href="#deliveries">Deliveries</a></li>
+                            <li>@Html.ActionLink("Logout", "Logout", "Home")</li>
+                          </ul>
+                        </div>
+                        <div class="main">
+                          <div class="mainContent clearfix">
+                             <!--Start-->
+                             <div id="orders">
+                            <!--INSERT View Inventory Module HTML-->
+                                      <div id="orders">
+                                          <div class="quick-press">
+                                              <div class="table-users">
+
+                                                  <div class="header">ORDERS</div>
+
+                                                  <table cellspacing="1 ">
+                                                      <tr>
+                                                          <th>Order No</th>
+                                                          <th>Date Order</th>
+                                                          <th>Status</th>
+                                                          <th>User ID</th>
+                                                          <th>Action</th>
+                                                      </tr>
+                                                      @foreach(Order order in Model.orders) { 
+                                                          <tr>
+                                                              <td>@order.Order_No</td>
+                                                              <td>@order.Date_Ordered</td>
+                                                              <td>@order.Status</td>
+                                                              <td>@order.User_ID</td>
+                                                              <td>
+                                                                  @if (!order.Status.Equals("Delivered") && !order.Status.Equals("Delivering") && !order.Status.Equals("Requesting"))
+                                                                  {
+
+                                                              @Html.ActionLink("Deliver", "Deliver", "Operations", new { Order_No = order.Order_No }, null)
+                                                                      
+                                                                  }
+                                                              </td>
+                                                          </tr>
+                                                      }
+
+                                                      
+                                                  </table>
+                                              </div>
+                                              <!--Next-->
+                                          </div>
+                                      </div>
+                                  </div>
+                            <!--End-->
+
+                             
+
+                             <!--Start-->
+                             <div id="deliveries">
+
+                            <!--INSERT View Deliveries Module HTML-->
+
+                                      <div id="deliveries">
+                                          <div class="quick-press">
+                                              <h4>View Deliveries</h4>
+                                              
+
+                                              <div class="table-users">
+
+                                                  <div class="header">Deliveries</div>
+
+                                                  <table cellspacing="1 ">
+                                                      <tr>
+                                                          <th>Delivery No</th>
+                                                          <th>Delivery Address</th>
+                                                          <th>Date Delivered</th>
+                                                          <th>Status</th>
+                                                          <th>Action</th>
+                                                      </tr>
+                                                      @foreach(Delivery delivery in Model.deliveries) { 
+                                                          <tr>
+                                                              <td>@delivery.Delivery_No</td>
+                                                              <td>@delivery.Delivery_Address</td>
+                                                              <td>@delivery.Date_Delivered</td>
+                                                              <td>@delivery.Status</td>
+                                                              <td>@Html.ActionLink("Finish Delivery", "FinishDelivery","Operations", new { Delivery_No = delivery.Delivery_No},null)</td>
+                                                              
+                                                          </tr>
+                                                      }
+                                                  </table>
+                                              </div>
+                                              <!--Next-->
+                                          </div>
+                                      </div>
+                                  </div>
+                              
+                            <!--End-->
+                         </div>
+                      </div>
+                    </div>
+
+
+
+

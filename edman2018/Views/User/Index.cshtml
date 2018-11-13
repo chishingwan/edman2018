@@ -1,0 +1,141 @@
+﻿@using edman2018.Models;
+
+@model UserViewModel
+
+@{
+    ViewBag.Title = "My Account";
+}
+
+@{ 
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+    <div class="admin-panel clearfix">
+        <div class="slidebar">
+            <div class="logo">
+                <a href=""></a>
+            </div>
+            <ul>
+                <li><a href="#orders">My Orders</a></li>
+                <li><a href="#profile">My Account</a></li>
+                <li><a href="#logout">Logout</a></li>
+
+            </ul>
+        </div>
+        <div class="main">
+            <div class="mainContent clearfix">
+                <div id="profile">
+                            <div id="editaccount">
+                                <div class="quick-press">
+                                    @{ Html.BeginForm("EditUser", "User", FormMethod.Post);
+                                        <div class="container">
+                                            <div class="panel panel-primary">
+                                                <div class="panel-heading">Edit Account</div>
+
+                                                <div class="panel-body">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Password</label>
+                                                                @Html.PasswordFor(m => m.user.Password, new { @class ="form-control"})
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">First Name</label>
+                                                                @Html.TextBoxFor(m => m.user.First_Name, new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Last Name</label>
+                                                                @Html.TextBoxFor(m => m.user.Last_Name, new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Address</label>
+                                                                @Html.TextBoxFor(m => m.user.Address, new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Phone</label>
+                                                                @Html.TextBoxFor(m => m.user.Phone, new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Mobile</label>
+                                                                @Html.TextBoxFor(m => m.user.Mobile, new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    @Html.HiddenFor(m => m.user.User_ID)
+                                                    @Html.HiddenFor(m => m.user.Date_Added)
+                                                    @Html.HiddenFor(m => m.user.Email)
+                                                    @Html.HiddenFor(m => m.user.Type_ID)
+
+                                                    <input type="submit" class="btn btn-primary" value="EditUser">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        Html.EndForm();
+                                    }
+                              
+                           
+                        </div>
+                    </div>
+                </div>
+
+                <div id="orders">
+                    <div class="admin-panel clearfix">
+                        <div class="main">
+                            <div id="inventory">
+                                <div class="quick-press">
+                                    <div class="table-users">
+
+                                        <div class="header">My Orders</div>
+
+                                        <table cellspacing="1 ">
+                                            <tr>
+                                                <th>Order No</th>
+                                                <th>Order Status</th>
+                                                <th>Date Ordered</th>
+                                                <th>Action</th>
+                                            </tr>
+
+                                            @foreach (Order order in Model.Orders)
+                                            {
+                                                <tr>
+                                                    <td>@order.Order_No</td>
+                                                    <td>@order.Status</td>
+                                                    <td>@order.Date_Ordered</td>
+                                                    <td>@if (order.Status.Equals("Delivered"))
+                                                    {
+                                                        @Html.ActionLink("Return","Return","User")
+                                                    }
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </table>
+                                    </div>
+                                    <!--Next-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+

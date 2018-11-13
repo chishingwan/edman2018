@@ -1,0 +1,156 @@
+﻿@using edman2018.Models
+
+@model edman2018.Models.LogisticViewModel
+
+@{
+
+        Layout = "~/Views/Shared/_Home.cshtml";
+
+}
+
+                <div class="admin-panel clearfix">
+                        <div class="slidebar">
+                          <div class="logo">
+                            <a href=""></a>
+                          </div>
+                          <ul>
+                            <li><a href="#inventory">Inventory</a></li>
+                            <li><a href="#orders">Orders</a></li>
+                            <li><a href="#deliveries">Deliveries</a></li>
+                            <li>@Html.ActionLink("Logout", "Logout", "Home")</li>
+                          </ul>
+                        </div>
+                        <div class="main">
+                      <div class="mainContent clearfix">
+                        <!--Start-->
+                          <div id="inventory">
+                            
+                        <!--INSERT View Inventory Module HTML-->
+
+                             
+             <div id="inventory">
+               <div class="quick-press">
+                 <div class="table-users">
+                   
+                    <div class="header">Inventory</div>
+                    
+                    <table cellspacing="1 ">
+                       <tr>
+                          <th>Inventory ID</th>
+                          <th>Product Name</th>
+                          <th>Quantity</th>
+                          <th>Critical Level</th>
+                          <th>Inventory Date</th>
+                          <th>Action</th>
+                          <th>@Html.ActionLink("Add Inventory","AddInventory","Logistic")</th>
+                       </tr>
+                       @foreach(Inventory inventory in Model.inventories) { 
+                           <tr>
+                              <td>@inventory.Inventory_ID</td>
+                              <td>@inventory.Product_Name</td>
+                              <td>@inventory.Quantity</td>
+                              <td>@inventory.Critical_Level</td>
+                              <td>@inventory.Inventory_Date</td>
+                              <td>@Html.ActionLink("Add Stock","AddStocks","Logistic", new { Inventory_ID = inventory.Inventory_ID }, null)</td>
+                           </tr>
+                        }
+                      
+                    </table>
+                 </div>
+                 <!--Next-->
+              </div>
+             </div>
+         </div>
+      </div>
+                          </div>
+                        <!--End-->
+
+                        <!--Start-->
+                          <div id="deliveries">
+                              
+                              <!--INSERT View Deliveries Module HTML-->
+
+                              <div class="admin-panel clearfix">
+                                  <div class="main">
+                                      <div id="deliveries">
+                                          <div class="quick-press">
+                                              <h4>View Deliveries</h4>
+                                              
+
+                                              <div class="table-users">
+
+                                                  <div class="header">Deliveries</div>
+
+                                                  <table cellspacing="1 ">
+                                                      <tr>
+                                                          <th>Delivery No</th>
+                                                          <th>Delivery Address</th>
+                                                          <th>Date Delivered</th>
+                                                          <th>Status</th>
+                                                          <th>Action</th>
+                                                      </tr>
+                                                      @foreach(Delivery delivery in Model.deliveries) { 
+                                                          <tr>
+                                                              <td>@delivery.Delivery_No</td>
+                                                              <td>@delivery.Delivery_Address</td>
+                                                              <td>@delivery.Date_Delivered</td>
+                                                              <td>@delivery.Status</td>
+                                                              <td><button type="submit" class="submit">Edit</button></td>
+                                                              <td><button type="submit" class="submit" onclick="myFunction()">Delete</button></td>
+                                                              
+                                                          </tr>
+                                                      }
+                                                  </table>
+                                              </div>
+                                              <!--Next-->
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                        <!--End-->
+                          <div id="orders">
+                              
+                              <!--INSERT View Orders   Module HTML-->
+
+                              <div class="admin-panel clearfix">
+                                  <div class="main">
+                                      <div id="orders">
+                                          <div class="quick-press">
+                                              <div class="table-users">
+
+                                                  <div class="header">ORDERS</div>
+
+                                                  <table cellspacing="1 ">
+                                                      <tr>
+                                                          <th>Order No</th>
+                                                          <th>Date Order</th>
+                                                          <th>Status</th>
+                                                          <th>User ID</th>
+                                                          <th>Action</th>
+                                                      </tr>
+                                                      @foreach(Order order in Model.orders) { 
+                                                          <tr>
+                                                              <td>@order.Order_No</td>
+                                                              <td>@order.Date_Ordered</td>
+                                                              <td>@order.Status</td>
+                                                              <td>@order.Status</td>
+                                                              <td><button type="submit" class="submit">Edit</button></td>
+                                                          </tr>
+                                                      }
+
+                                                      
+                                                  </table>
+                                              </div>
+                                              <!--Next-->
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                            
+
+
+

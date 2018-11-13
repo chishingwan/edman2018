@@ -18,6 +18,25 @@ namespace edman2018
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "User",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "User", action = "Index", id = UrlParameter.Optional }
+                );
+
+            routes.MapRoute(
+                name: "Sales",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Sales", action = "Index", id = UrlParameter.Optional }
+                );
+
+            routes.MapRoute(
+               name: "Logistic",
+               url: "{controller}/{action}/{id}",
+               defaults: new { controller = "Logistic", action = "Index", id = UrlParameter.Optional }
+               );
+
         }
     }
 }

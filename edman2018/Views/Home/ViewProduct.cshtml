@@ -1,0 +1,110 @@
+﻿@model edman2018.Models.Product
+
+@{
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+<!--Products Section -->
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-8 col-sm-8 mr-top-50">
+            <a href="#">
+                <img src="~/images/product/@{@Model.Product_ID}.jpg" class="img-responsive mr-botm">
+            </a>
+
+            <h3>@Model.Product_Name</h3>
+
+            <h2>@Model.Price</h2>
+            <p>
+                @Model.Product_Description
+            </p>
+
+            <p>
+
+                <!--<a href="#" class="btn btn-primary btn-lg" role="button">BUY</a>-->
+                @if(Session["Type"]==null || Session["Type"].Equals("1") || Session["Type"].Equals("2")) { 
+                    @Html.ActionLink("BUY", "Order", "User", new { id = Model.Product_ID }, new { @class = "btn btn-primary btn-lg" })
+                }
+            </p>
+
+
+        </div>
+
+    </div>
+    <!-------------------Reply Section------->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="page-header">Leave a Review / Feedback</h2>
+                <section class="comment-list">
+                    <!-- Give Feedback -->
+                    <article class="row">
+                        <textarea name="comment" form="usrform" rows="5" cols="90" placeholder="Enter text here ..."></textarea><br>
+                        <button type="submit" class="submit">Comment</button>
+                    </article>
+                    <!--First comment-->
+                    <article class="row">
+                        <div class="col-md-2 col-sm-2 hidden-xs">
+                            <figure class="thumbnail">
+                                <img class="img-responsive" src="http://www.tangoflooring.ca/wp-content/uploads/2015/07/user-avatar-placeholder.png" />
+                                <figcaption class="text-center">username</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-10 col-sm-10">
+                            <div class="panel panel-default arrow left">
+                                <div class="panel-body">
+                                    <header class="text-left">
+                                        <div class="comment-user"><i class="fa fa-user"></i>Me</div>
+                                        <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> Dec 16, 2014</time>
+                                    </header>
+                                    <div class="comment-post">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </p>
+                                    </div>
+                                    <p class="text-right"><a href="#" class="btn btn-default btn-sm"><i class="fa fa-reply"></i> reply</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <!--Second-->
+                    <article class="row">
+                        <div class="col-md-2 col-sm-2 hidden-xs">
+                            <figure class="thumbnail">
+                                <img class="img-responsive" src="http://www.tangoflooring.ca/wp-content/uploads/2015/07/user-avatar-placeholder.png" />
+                                <figcaption class="text-center">username</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-9 col-sm-9">
+                            <div class="panel panel-default arrow left">
+                                <div class="panel-body">
+                                    <header class="text-left">
+                                        <div class="comment-user"><i class="fa fa-user"></i> That Guy</div>
+                                        <time class="comment-date" datetime="16-12-2014 01:05"><i class="fa fa-clock-o"></i> Dec 16, 2014</time>
+                                    </header>
+                                    <div class="comment-post">
+                                        <p>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </p>
+                                    </div>
+                                    <p class="text-right"><a href="#" class="btn btn-default btn-sm"><i class="fa fa-reply"></i> reply</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                </section>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<!--End Products Section -->
+<!-- JavaScript -->
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/bootstrap.js"></script>

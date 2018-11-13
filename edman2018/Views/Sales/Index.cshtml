@@ -1,0 +1,76 @@
+﻿@using edman2018.Models;
+
+@model edman2018.Models.SalesViewModel
+
+@{
+
+    Layout = "~/Views/Shared/_Home.cshtml";
+
+}
+
+<div class="admin-panel clearfix">
+
+    <div class="slidebar">
+        <div class="logo">
+            <a href=""></a>
+
+        </div>
+
+        <ul>
+            <li><a href="#returns">Returns</a></li>
+            <li><a href="#products">Products</a></li>
+            <li>@Html.ActionLink("Logout", "Logout", "Home")</li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="mainContent clearfix">
+            <!--Start-->
+            <div id="returns">
+                <h2 class="header"><span class="icon"></span>RETURNS MODULE</h2>
+                <!--INSERT View Reviews Module HTML-->
+            </div>
+            <!--End-->
+            <!--Start-->
+            <div id="products">
+                <h2 class="header"><span class="icon"></span>PRODUCTS MODULE</h2>
+                <!--INSERT View Reviews Module HTML-->
+                <div class="table-users">
+
+                    <div class="header">Products</div>
+
+                    <table cellspacing="1 ">
+                        <tr>
+                            <th>Product ID</th>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Date Added</th>
+                            <th>Date Modified</th>
+                            <th>Action</th>
+                            <th>@Html.ActionLink("AddProduct","AddProduct","Sales")</th>
+                        </tr>
+                        @foreach (Product product in Model.products)
+                        {
+                            <tr>
+                                <td>@product.Product_ID</td>
+                                <td>@product.Product_Name</td>
+                                <td>Php @product.Price</td>
+                                <td>@product.Date_Added</td>
+                                <td>@product.Date_Modified</td>
+                                <td>@Html.ActionLink("Edit", "EditProduct", "Sales", new { Product_ID = product.Product_ID },null)</td>
+                                <td>@Html.ActionLink("Delete", "DeleteProduct", "Sales", new { Product_ID = product.Product_ID }, null)</td>
+                            </tr>
+                        }
+                        
+                    </table>
+                </div>
+            </div>
+            <!--End-->
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

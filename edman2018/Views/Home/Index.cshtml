@@ -1,7 +1,167 @@
-﻿
+﻿@model IEnumerable<edman2018.Models.Product>
+
+@{
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<!--Products Section -->
+<div class="featuredtext">
+    <h1>Featured</h1>
+</div>
+
+<div class="container">
+
+    <div class="row">
+        <div class="row">
+            @foreach (var product in Model)
+            {
+            <div class=" col-md-3 col-sm-4">
+                <div class="thumbnail">
+                    <img src="~/images/product/@{@product.Product_ID}.jpg" alt="">
+                    <div class="caption">
+                        <h3>@product.Product_Name</h3>
+                        <p>@product.Product_Description</p>
+                        <p><!--<a href="single.aspx" class="btn btn-primary" role="button">ADD TO CART</a>--> @Html.ActionLink("See Details","ViewProduct","Home",new { id = product.Product_ID }, new { @class = "btn btn-danger" })</p>
+                    </div>
+                </div>
+            </div>
+            }
+            <div class=" col-md-3 col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/img1.jpg" alt="">
+                    <div class="caption">
+                        <h3>Product Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas feugiat gravida. </p>
+                        <p><a href="single.aspx" class="btn btn-primary" role="button">ADD TO CART</a> <a href="single.aspx" class="btn btn-danger" role="button">See Details</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-md-3 col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/img2.jpg" alt="">
+                    <div class="caption">
+                        <h3>Product Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas feugiat gravida. </p>
+                        <p><a href="single.aspx" class="btn btn-primary" role="button">ADD TO CART/a> <a href="single.aspx" class="btn btn-danger" role="button">See Details</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-md-3 col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/img1.jpg" alt="">
+                    <div class="caption">
+                        <h3>Product Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas feugiat gravida. </p>
+                        <p><a href="single.aspx" class="btn btn-primary" role="button">ADD TO CART</a> <a href="single.aspx" class="btn btn-danger" role="button">See Details</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-md-3 col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/img2.jpg" alt="">
+                    <div class="caption">
+                        <h3>Product Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas feugiat gravida. </p>
+                        <p><a href="single.aspx" class="btn btn-primary" role="button">ADD TO CART</a> <a href="single.aspx" class="btn btn-danger" role="button">See Details</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-md-3 col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/img1.jpg" alt="">
+                    <div class="caption">
+                        <h3>Product Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas feugiat gravida. </p>
+                        <p><a href="single.aspx" class="btn btn-primary" role="button">ADD TO CART</a> <a href="single.aspx" class="btn btn-danger" role="button">See Details</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-md-3 col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/img2.jpg" alt="">
+                    <div class="caption">
+                        <h3>Product Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas feugiat gravida. </p>
+                        <p><a href="single.aspx" class="btn btn-primary" role="button">ADD TO CART</a> <a href="single.aspx" class="btn btn-danger" role="button">See Details</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-md-3 col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/img1.jpg" alt="">
+                    <div class="caption">
+                        <h3>Product Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas feugiat gravida. </p>
+                        <p><a href="single.aspx" class="btn btn-primary" role="button">ADD TO CART</a> <a href="single.aspx" class="btn btn-danger" role="button">See Details</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-md-3 col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/img2.jpg" alt="">
+                    <div class="caption">
+                        <h3>Product Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas feugiat gravida. </p>
+                        <p><a href="single.aspx" class="btn btn-primary" role="button">ADD TO CART</a> <a href="single.aspx" class="btn btn-danger" role="button">See Details</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-md-3 col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/img1.jpg" alt="">
+                    <div class="caption">
+                        <h3>Product Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas feugiat gravida. </p>
+                        <p><a href="single.aspx" class="btn btn-primary" role="button">ADD TO CART</a> <a href="single.aspx" class="btn btn-danger" role="button">See Details</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-md-3 col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/img2.jpg" alt="">
+                    <div class="caption">
+                        <h3>Product Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas feugiat gravida. </p>
+                        <p><a href="single.aspx" class="btn btn-primary" role="button">ADD TO CART</a> <a href="single.aspx" class="btn btn-danger" role="button">See Details</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" col-md-3 col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/img1.jpg" alt="">
+                    <div class="caption">
+                        <h3>Product Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas feugiat gravida. </p>
+                        <p><a href="single.aspx" class="btn btn-primary" role="button">ADD TO CART</a> <a href="single.aspx" class="btn btn-danger" role="button">See Details</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-md-3 col-sm-4">
+                <div class="thumbnail">
+                    <img src="img/img2.jpg" alt="">
+                    <div class="caption">
+                        <h3>Product Name</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla egestas feugiat gravida. </p>
+                        <p><a href="single.aspx" class="btn btn-primary" role="button">ADD TO CART</a> <a href="single.aspx" class="btn btn-danger" role="button">See Details</a></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<!--End Products Section -->
+<!-- JavaScript -->
+    </form>
+
 

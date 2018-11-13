@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Home.cshtml";
+}
+
+    
+        <div id="login-box">
+            <div class="left">
+                <h1>Log in</h1>
+
+
+                @{Html.BeginForm(); 
+
+                @Html.TextBox("Email", null, new { @placeholder = "Email" })
+
+                @Html.Password("Password", null, new { @placeholder = "Password" })
+
+                <input type="submit" formmethod="post" value="Login" />
+                    Html.EndForm();
+                }
+                <br><a href="#">Forgot Password?</a>
+            </div>
+                
+                <div class="rightlogin">
+                  <span class="loginwith">Log in with<br />social network</span>
+                  
+                  <button class="social-signin facebook">Log in with facebook</button>
+                  <button class="social-signin twitter">Log in with Twitter</button>
+                  <button class="social-signin google">Log in with Google+</button>
+                </div>
+                <div class="orlogin">OR</div>
+              </div>
+
+
+
+

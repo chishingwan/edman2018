@@ -1,0 +1,43 @@
+﻿@model edman2018.Models.Inventory
+
+@{
+
+    Layout = "~/Views/Shared/_Home.cshtml";
+
+}
+    <div class="admin-panel clearfix">
+        <div class="main">
+             <div id="addinventory">
+               <div class="quick-press">
+                
+                 <form action="" method="post">             
+                    <div class="container">
+                    <div class="panel panel-primary">
+                    <div class="panel-heading">Add Stocks</div>
+
+                    <div class="panel-body">
+
+                    <div class="row">
+
+                    <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label">Quantity</label>
+                      <input type="number" class="form-control" name="Quantity" id="Quantity">
+                    </div>
+                    </div>
+                    </div>
+                    @Html.Hidden("Inventory_ID", Model.Inventory_ID)
+                    <input type="submit" class="btn btn-primary" value="AddStock">
+                    </div>
+                    </div>
+                    </div>
+                  </form>
+                </div>
+             </div>
+         </div>
+      </div>
+
+
+
+
+

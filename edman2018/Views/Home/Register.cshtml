@@ -1,0 +1,41 @@
+﻿ @{ 
+     Layout = "~/Views/Shared/_Home.cshtml";
+ }
+
+   <div id="register-box">
+       <div class="left">
+           <h1>Sign up</h1>
+
+           @{Html.BeginForm(); 
+
+           @Html.TextBox("Email", null, new { @placeholder = "Email" });
+
+
+           @Html.Password("Password", null, new { @placeholder = "Password" });
+
+
+           @Html.TextBox("First_Name", null, new { @placeholder = "First Name" });
+
+
+           @Html.TextBox("Last_Name", null, new { @placeholder = "Last Name" });
+
+
+           @Html.TextBox("Address", null, new { @placeholder = "Address" });
+
+
+           @Html.TextBox("Phone", null, new { @placeholder = "Phone" });
+
+
+           @Html.TextBox("Mobile", null, new { @placeholder = "Mobile" });
+
+           <input type="submit"  formmethod="post" value="Register" />
+
+               Html.EndForm();
+           }
+       </div>
+
+        
+       </div>
+
+
+
