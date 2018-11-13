@@ -86,3 +86,16 @@ C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.CrystalReport
 C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.ReportSource.dll
 C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.Shared.dll
 C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.Web.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\Xotiii\Documents\edman2018\edman2018\bin\stdole.dll

@@ -1,32 +1,64 @@
-﻿
+﻿@using edman2018.Models
+
+@model edman2018.Models.AccountingViewModel
+
 @{ 
     Layout = "~/Views/Shared/_Home.cshtml";
 }
 
+<div class="admin-panel clearfix">
+    <div class="slidebar">
+        <div class="logo">
+            <a href=""></a>
+        </div>
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#reports">Reports</a></li>
+            <li>@Html.ActionLink("Logout", "Logout", "Home", null)</li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="mainContent clearfix">
+            <div id="dashboard">
                 <div class="admin-panel clearfix">
-                        <div class="slidebar">
-                          <div class="logo">
-                           <a href=""></a>
-                          </div>
-                          <ul>
-                            <li><a href="#profile">My Profile</a></li>
-                            <li><a href="#reports">Reports</a></li>
-                            <li><a href="#posts">Logout</a></li>
-                          </ul>
-                        </div>
-                        <div class="main">
-                          <div class="mainContent clearfix">
-                               </div>
-                               <!--Reports Module-->
-                               <div id="reports">
-                                <!--INSERT EXTERNAL HTML REPORTS HERE-->
-                                   @Html.ActionLink("Print Request Report", "printRequestReport", "Accounting",null)
-                               </div>
-                               <div id="profile">
-                                    <h2 class="header"><span class="icon"></span>My Profile</h2>
-                                  </div>
-                             </div>
-                           </div>
+                                  <div class="main">
+                                      <div id="dashboard">
+                                          <div class="quick-press">
+                <!--INSERT EXTERNAL HTML REPORTS HERE-->
+                                              
 
+                                              <div class="table-users">
+
+                                                  <div class="header">Top Orders</div>
+
+                                                  <table cellspacing="1 ">
+                                                      <tr>
+                                                          <th>Product_Name</th>
+                                                          <th>Product_ID</th>
+                                                          <th>Total Orders</th>
+                                                      </tr>
+                                                      @foreach(AccountingViewModel.TOrders torders in Model.TopOrder) { 
+                                                          <tr>
+                                                              <td>@torders.Product_Name</td>
+                                                              <td>@torders.Product_ID</td>
+                                                              <td>@torders.Total_Orders</td>
+                                                             
+                                                          </tr>
+                                                      }
+                                                  </table>
+                                              </div>
+                                              </div>
+                            </div>
+                        </div>
+            </div>
+            <div id="reports">
+                <h2 class="header"><span class="icon"></span>Reports</h2>
+                <ul>
+                    <li>@Html.ActionLink("Print Request Report", "printRequestReport", "Accounting", null)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
 

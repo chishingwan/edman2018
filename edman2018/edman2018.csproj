@@ -177,6 +177,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AccountingViewModel.cs" />
     <Compile Include="Models\Delivery.cs" />
     <Compile Include="Models\EdmanDBContext.cs" />
     <Compile Include="Models\Inventory.cs" />
